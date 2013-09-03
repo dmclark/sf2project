@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="JRI\CatsBundle\Entity\SfGuardRememberKey" table="sf_guard_remember_key">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userId" type="bigint" column="user_id" nullable="true"/>
+    <field name="rememberKey" type="string" column="remember_key" length="32" nullable="true"/>
+    <field name="ipAddress" type="string" column="ip_address" length="50" nullable="true"/>
+    <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>
+  </entity>
+</doctrine-mapping>

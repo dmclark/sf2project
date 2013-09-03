@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="JRI\CatsBundle\Entity\PackageInstrument" table="package_instrument">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="packageId" type="bigint" column="package_id" nullable="false"/>
+    <field name="instrumentId" type="bigint" column="instrument_id" nullable="false"/>
+    <field name="minAge" type="smallint" column="min_age" nullable="false"/>
+    <field name="maxAge" type="smallint" column="max_age" nullable="false"/>
+    <field name="isAutocreate" type="boolean" column="is_autocreate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

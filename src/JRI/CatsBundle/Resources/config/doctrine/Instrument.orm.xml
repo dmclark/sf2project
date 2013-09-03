@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="JRI\CatsBundle\Entity\Instrument" table="instrument">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="255" nullable="false"/>
+    <field name="shortName" type="string" column="short_name" length="15" nullable="false"/>
+    <field name="description" type="text" column="description" nullable="true"/>
+    <field name="role" type="string" column="role" length="50" nullable="true"/>
+    <field name="minCompleted" type="integer" column="min_completed" nullable="false"/>
+    <field name="graphMin" type="integer" column="graph_min" nullable="true"/>
+    <field name="graphMax" type="integer" column="graph_max" nullable="true"/>
+    <field name="graphThreshold" type="integer" column="graph_threshold" nullable="true"/>
+    <field name="isStatic" type="bigint" column="is_static" nullable="false"/>
+    <field name="header" type="text" column="header" nullable="true"/>
+    <field name="copyright" type="text" column="copyright" nullable="true"/>
+  </entity>
+</doctrine-mapping>
