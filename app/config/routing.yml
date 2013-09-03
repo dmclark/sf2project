@@ -1,0 +1,5 @@
+jri_cats:
+    resource: "@JRICatsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
