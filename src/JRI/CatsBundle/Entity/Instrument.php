@@ -1,5 +1,6 @@
 <?php
 
+namespace JRI\CatsBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;

@@ -1,5 +1,6 @@
 <?php
 
+namespace JRI\CatsBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -69,12 +70,12 @@ class PackageInstrument
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\OneToMany(targetEntity="Instuument", mappedBy="PackageInstrument")
+     * @ORM\OneToMany(targetEntity="Instrument", mappedBy="PackageInstrument")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="instuument", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="instrument", referencedColumnName="id")
      * })
      */
-    private $Instuument;
+    private $Instrument;
 
     /**
      * Constructor
@@ -82,7 +83,7 @@ class PackageInstrument
     public function __construct()
     {
         $this->Package = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->Instuument = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->Instrument = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
 }
