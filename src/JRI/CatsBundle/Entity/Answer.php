@@ -1,6 +1,6 @@
 <?php
 
-
+namespace JRI\CatsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -19,7 +19,7 @@ class Answer
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
-    private $test_id;
+    private $testId;
 
     /**
      * @var integer
@@ -28,7 +28,7 @@ class Answer
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
-    private $question_id;
+    private $questionId;
 
     /**
      * @var string

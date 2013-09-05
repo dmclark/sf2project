@@ -31,21 +31,21 @@ class Package
      *
      * @ORM\Column(name="cycle_length", type="integer", length=3)
      */
-    private $cycle_length;
+    private $cycleLength;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="cycle_days_open", type="integer", length=3)
      */
-    private $cycle_days_open;
+    private $cycleDaysOpen;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="has_events", type="boolean")
      */
-    private $has_events;
+    private $hasEvents;
 
     /**
      * @var integer

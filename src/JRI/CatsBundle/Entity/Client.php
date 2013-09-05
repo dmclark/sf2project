@@ -1,5 +1,6 @@
 <?php
 
+namespace JRI\CatsBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -17,7 +18,7 @@ class Client
      *
      * @ORM\Column(name="program_id", type="integer")
      */
-    private $program_id;
+    private $programId;
 
     /**
      * @var string
@@ -45,49 +46,49 @@ class Client
      *
      * @ORM\Column(name="clinician_id", type="integer")
      */
-    private $clinician_id;
+    private $clinicianId;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="gender_id", type="integer", length=1)
      */
-    private $gender_id;
+    private $genderId;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="is_active", type="boolean")
      */
-    private $is_active;
+    private $isActive;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="admission_date", type="date")
      */
-    private $admission_date;
+    private $admissionDate;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="initiate_date", type="date")
      */
-    private $initiate_date;
+    private $initiateDate;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="discharge_date", type="date")
      */
-    private $discharge_date;
+    private $dischargeDate;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="edited_by", type="integer")
      */
-    private $edited_by;
+    private $editedBy;
 
     /**
      * @var integer
