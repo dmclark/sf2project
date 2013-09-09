@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Program
  *
  * @ORM\Table(name="program")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="JRI\CatsBundle\Entity\ProgramRepository")
  */
 class Program
 {
@@ -84,22 +84,12 @@ class Program
      */
     private $id;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\OneToMany(targetEntity="Package", mappedBy="Package")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="package_id", referencedColumnName="id")
-     * })
-     */
-    private $Package;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->Package = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
 
@@ -320,38 +310,6 @@ class Program
         return $this->id;
     }
 
-    /**
-     * Add Package
-     *
-     * @param \JRI\CatsBundle\Entity\Package $package
-     * @return Program
-     */
-    public function addPackage(\JRI\CatsBundle\Entity\Package $package)
-    {
-        $this->Package[] = $package;
-    
-        return $this;
-    }
-
-    /**
-     * Remove Package
-     *
-     * @param \JRI\CatsBundle\Entity\Package $package
-     */
-    public function removePackage(\JRI\CatsBundle\Entity\Package $package)
-    {
-        $this->Package->removeElement($package);
-    }
-
-    /**
-     * Get Package
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPackage()
-    {
-        return $this->Package;
-    }
 
     /**
      * Set package
@@ -364,5 +322,15 @@ class Program
         $this->package = $package;
     
         return $this;
+    }
+
+    /**
+     * Get package
+     *
+     * @return \JRI\CatsBundle\Entity\Package 
+     */
+    public function getPackage()
+    {
+        return $this->package;
     }
 }

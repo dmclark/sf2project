@@ -67,7 +67,7 @@ class Package
     /**
      * @ORM\OneToMany(targetEntity="Program", mappedBy="package")
      */
-    protected $program;
+    protected $programs;
     
 
     /**
@@ -75,7 +75,7 @@ class Package
      */
     public function __construct()
     {
-        $this->Instruments = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->Programs = new \Doctrine\Common\Collections\ArrayCollection();
         $this->Instruments = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
@@ -269,5 +269,15 @@ class Package
     public function getProgram()
     {
         return $this->program;
+    }
+
+    /**
+     * Get programs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPrograms()
+    {
+        return $this->programs;
     }
 }

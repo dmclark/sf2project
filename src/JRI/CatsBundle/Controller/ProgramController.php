@@ -29,7 +29,7 @@ class ProgramController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('JRICatsBundle:Program')->findAll();
+        $entities = $em->getRepository('JRICatsBundle:Program')->getPrograms();
 
         return array(
             'entities' => $entities,
